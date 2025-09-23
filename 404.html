@@ -22,7 +22,7 @@
     let path = window.location.pathname;
     // Remove trailing slashes
     path = path.replace(/\/+$/, "");
-    let slug = path.substring(path.indexOf("/-/") + 3);
+    let slug = path.substring(path.lastIndexOf("/") + 1);
     if (redirects[slug]) {
       location.replace(redirects[slug]);
     } else {
