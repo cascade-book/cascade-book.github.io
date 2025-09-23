@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Redirecting...</title>
+  <script>
+    const redirects = {
+      "chicago": "https://www.seattletimes.com/seattle-news/most-people-cant-correctly-identify-seattles-skyline-without-the-space-needle-survey-finds/",
+      "circus": "https://x.com/ParikPatelCFA/status/1778244173487104176",
+      "dbr": "https://soundcloud.com/user-95522277/dbr-s-julie-herrera",
+      "fed-paper": "https://www.federalreserve.gov/econres/feds/files/2023041pap.pdf",
+      "fire": "https://gizmodo.com/google-ceo-still-insists-ai-revolution-bigger-than-inve-1847288454",
+      "gini": "https://worldpopulationreview.com/country-rankings/gini-coefficient-by-country",
+      "new-yorker": "https://www.newyorker.com/magazine/2004/05/24/high-tech-bibliophilia",
+      "roisin": "https://youtu.be/nD-qyq_VhWc?si=eznhGUDxBvB_DAEj&t=271",
+      "saylor": "https://x.com/saylor/status/1307029562321231873",
+      "seattle-pi": "https://www.seattlepi.com/entertainment/article/on-architecture-how-the-new-central-library-1232303.php",
+      "till-hill": "https://www.capitolhillseattle.com/2014/02/pikespines-glacial-till-hill/",
+      "vows": "https://recordsetter.com/world-record/lgbtqia-couples-renewing-their-vows-together-once/57888",  
+    };
+
+    let path = window.location.pathname;
+    // Remove trailing slashes
+    path = path.replace(/\/+$/, "");
+    let slug = path.substring(path.indexOf("/-/") + 3);
+    if (redirects[slug]) {
+      location.replace(redirects[slug]);
+    } else {
+      document.write("Unknown redirect slug: " + slug);
+    }
+  </script>
+</head>
+<body>
+</body>
+</html>
